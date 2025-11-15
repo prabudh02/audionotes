@@ -1,0 +1,15 @@
+AUDIO NOTES EXPORT
+==================================================
+
+SECTION: Main
+------------------------------
+
+SECTION: hello
+------------------------------
+[2025-11-06 15:24:08] Hello, this is Robotooma and I am recording this audio for my project of audio notes making and here we are going to record this audio. We will go to see what is happening in this audio is the audio taking working fine or not. Then we will be using to convert it into text using whisper AI which might be taking an audio file and converting it some rising it. This is what we are going to do here.
+
+EXAMPLES
+------------------------------
+[2025-11-06 18:28:54] GENERAL:
+give me an example of
+

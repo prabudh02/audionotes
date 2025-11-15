@@ -1,0 +1,7 @@
+openai-whisper
+pyaudio
+pydub
+numpy
+python-docx
+pandas
+soundfile
