@@ -1,0 +1,1773 @@
+[
+  {
+    "text": "LEC-1: Introduction to DBMS 1. What is Data a. Data isa collection of raw, unorganized facts and details like text, observations, figures, symbols, and descriptions of things etc. In other words, data does not carry any specific purpose and has no significance by itself. Moreover, data is measured in terms of bits and bytes - which are basic units of information in the context of computer storage and processing. b. Data can be recorded and doesnt have any meaning unless processed. 2. Types of Data a. Quantitative i. Numerical form ii, Weight, volume, cost of an item. b. Qualitative i. Descriptive, but not numerical. ii, Name, gender, hair color of a person. 3. What is Information a. Info. Is processed, organized, and structured data. b. It provides context of the data and enables decision making. c. Processed data that make sense to us. d. Information is extracted from the data, by analyzing and interpreting pieces of data. e",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Data",
+        "Types of Data",
+        "Information"
+      ]
+    }
+  },
+  {
+    "text": ". b. It provides context of the data and enables decision making. c. Processed data that make sense to us. d. Information is extracted from the data, by analyzing and interpreting pieces of data. e. Eg, you have data of all the people living in your locality, its Data, when you analyze and interpret the data and come to some conclusion that: i. There are 100 senior citizens. ii, The sex ratio is 1.1. iii. Newborn babies are 100. These are information. 4. Data vs Information a. Data is a collection of facts, while information puts those facts into context. b. While data is raw and unorganized, information is organized. c.__ Data points are individual and sometimes unrelated. Information maps out that data to provide a big-picture view of how it all fits together. d. Data, on its own, is meaningless. When its analyzed and interpreted, it becomes meaningful information. e. Data does not depend on information; however, information depends on data. f",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management"
+      ],
+      "Linux": [
+        "File Permissions",
+        "Process Management"
+      ]
+    }
+  },
+  {
+    "text": ". d. Data, on its own, is meaningless. When its analyzed and interpreted, it becomes meaningful information. e. Data does not depend on information; however, information depends on data. f. Data typically comes in the form of graphs, numbers, figures, or statistics. Information is typically presented through words, language, thoughts, and ideas. g. Data isnt sufficient for decision-making, but you can make decisions based on information. 5. What is Database a. Database is an electronic place/system where data is stored in a way that it can be easily accessed, managed, and updated. b. To make real use Data, we need Database management systems. (DBMS) 6. What is DBMS a. Adatabase-management system (DBMS) is a collection of interrelated data and a set of programs to access those data. The collection of data, usually referred to as the database, contains information relevant to an enterprise",
+    "metadata": {
+      "topic": "Data Management",
+      "subtopics": [
+        "Data Analysis",
+        "Database Systems",
+        "DBMS"
+      ]
+    }
+  },
+  {
+    "text": ". The collection of data, usually referred to as the database, contains information relevant to an enterprise. The primary goal of a DBMS is to provide a way to store and retrieve database information that is both convenient and efficient. b. A DBMS is the database itself, along with all the software and functionality. It is used to perform different operations, like addition, access, updating, and deletion of the data.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries"
+      ]
+    }
+  },
+  {
+    "text": "7. 8. DBMS vs File Systems a. File-processing systems has major disadvantages. i. ii. iii. iv. v. vi. vii. Data Redundancy and inconsistency Difficulty in accessing data Data isolation Integrity problems Atomicity problems Concurrent-access anomalies Security problems b. Above 7 are also the Advantages of DBMS (answer to Why to use DBMS)",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": "LEC-2: DBMS Architecture 1. View of Data (Three Schema Architecture) a. g 2. Instances and Schemas a. The major purpose of DBMS is to provide users with an abstract view of the data. That is, the system hides certain details of how the data is stored and maintained. To simplify user interaction with the system, abstraction is applied through several levels of abstraction. The main objective of three level architecture is to enable multiple users to access the same data with a personalized view while storing the underlying data only once Physical level / Internal level i. The lowest level of abstraction describes how the data are stored. ii, Low-level data structures used. ii. It has Physical schema which describes physical storage structure of DB. Vv. Talks about: Storage allocation (N-ary tree etc), Data compression & encryption etc. v. Goal: We must define algorithms that allow efficient access to data. Logical level / Conceptual level: i",
+    "metadata": {
+      "Operating System": [
+        "Process Management"
+      ],
+      "DBMS": [
+        "View of Data",
+        "Three Schema Architecture"
+      ]
+    }
+  },
+  {
+    "text": ". Vv. Talks about: Storage allocation (N-ary tree etc), Data compression & encryption etc. v. Goal: We must define algorithms that allow efficient access to data. Logical level / Conceptual level: i. The conceptual schema describes the design of a database at the conceptual level, describes what data are stored in DB, and what relationships exist among those data. ii, User at logical level does not need to be aware about physical-level structures. iii. DBA, who must decide what information to keep in the DB use the logical level of abstraction. iv. Goal: ease to use. View level / External level: i. Highest level of abstraction aims to simplify users interaction with the system by providing different view to different end-user. ii. Each view schema describes the database part that a particular user group is interested and hides the remaining database from that user group. iii, At the external level, a database contains several schemas that sometimes called as subschema",
+    "metadata": {
+      "topic": "Storage Management",
+      "subtopics": [
+        "Data Compression",
+        "Data Encryption",
+        "N-ary tree",
+        "Database Schema"
+      ]
+    }
+  },
+  {
+    "text": ". iii, At the external level, a database contains several schemas that sometimes called as subschema. The subschema is used to describe the different view of the database. iv. At views also provide a security mechanism to prevent users from accessing certain parts of DB. External Level External Level External / Conceptual External Schema Mapping Conceptual Schema Conceptual Level Conceptual / Internal Mapping Internal Schema Internal Level a Database The collection of information stored in the DB at a particular moment is called an instance of DB.",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ],
+      "Computer Network": [
+        "TCP/IP",
+        "OSI Model",
+        "Network Topologies",
+        "Routing Algorithms",
+        "Network Security",
+        "DNS",
+        "HTTP/HTTPS",
+        "Socket Programming",
+        "Network Protocols",
+        "Wireless Networks",
+        "Network Layers",
+        "Subnetting",
+        "VPN"
+      ]
+    }
+  },
+  {
+    "text": "b. The overall design of the DB is called the DB schema. c. Schema is structural description of data. Schema doesnt change frequently. Data may change frequently. d. DB schema corresponds to the variable declarations (along with type) in a program. We have 3 types of Schemas: Physical, Logical, several view schemas called subschemas. f. Logical schema is most important in terms of its effect on application programs, as programmers construct apps by using logical schema. g._ Physical data independence, physical schema change should not affect logical schema/application programs. 3. Data Models: a. Provides a way to describe the design of a DB at logical level. b. Underlying the structure of the DB is the Data Model; a collection of conceptual tools for describing data, data relationships, data semantics & consistency constraints. c. Eg, ER model, Relational Model, object-oriented model, object-relational data model etc. 4. Database Languages: a",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": ". c. Eg, ER model, Relational Model, object-oriented model, object-relational data model etc. 4. Database Languages: a. Data definition language (DDL) to specify the database schema. b. Data manipulation language (DML) to express database queries and updates. c. Practically, both language features are present in a single DB language, e.g, SQL language. d. DDL i. We specify consistency constraints, which must be checked, every time DB is updated. e. DML i. Data manipulation involves 1. Retrieval of information stored in DB. 2. Insertion of new information into DB. 3. Deletion of information from the DB. 4. Updating existing information stored in DB. ii, Query language, a part of DML to specify statement requesting the retrieval of information. 5. Howis Database accessed from Application programs a. Apps (written in host languages, C/C++, Java) interacts with DB. b. Eg, Banking systems module generating payrolls access DB by executing DML statements from the host language. c",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ]
+    }
+  },
+  {
+    "text": ". Apps (written in host languages, C/C++, Java) interacts with DB. b. Eg, Banking systems module generating payrolls access DB by executing DML statements from the host language. c. A Plis provided to send DML/DDL statements to DB and retrieve the results. i. Open Database Connectivity (ODBC), Microsoft C. ii. Java Database Connectivity (JDBC), Java. 6. Database Administrator (DBA) a. Aperson who has central control of both the data and the programs that access those data. b._ Functions of DBA i. Schema Definition ii, Storage structure and access methods. iii, Schema and physical organization modifications. iv. Authorization control. v. Routine maintenance 1. Periodic backups. 2. Security patches. 3. Any upgrades. 7. DBMS Application Architectures: Client machines, on which remote DB users work, and server machines on which DB system runs. a. T 1 Architecture i. The client, server & DB all present on the same machine.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security"
+      ]
+    }
+  },
+  {
+    "text": "b. 72 Architecture i. App is partitioned into 2-components. ii. Client machine, which invokes DB system functionality at server end through query language statements. iii, API standards like ODBC & JDBC are used to interact between client and server. c. 73 Architecture i. App is partitioned into 3 logical components. ii, Client machine is just a frontend and doesnt contain any direct DB calls. iii, Client machine communicates with App server, and App server communicated with DB system to access data. iv. Business logic, what action to take at that condition is in App server itself. v. 13 architecture are best for WWW Applications. vi. Advantages: 1. Scalability due to distributed application servers. 2. Data integrity, App server acts as a middle layer between client and DB, which minimize the chances of data corruption. 3. Security, client cant directly access DB, hence it is more secure. i}. i} client } 1 1 N database system 1 server 1 application server database system a",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "13 architecture",
+        "Architecture Patterns",
+        "Distributed Application Servers",
+        "API Standards",
+        "Business Logic"
+      ]
+    }
+  },
+  {
+    "text": ". 3. Security, client cant directly access DB, hence it is more secure. i}. i} client } 1 1 N database system 1 server 1 application server database system a. two-tier architecture b. three-tier architecture",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Security"
+      ]
+    }
+  },
+  {
+    "text": "LEC-3: Entity-Relationship Model Data Model: Collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints. ER Model 1. It is a high level data model based on a perception of a real world that consists of a collection of basic objects, called entities and of relationships among these objects. 2. Graphical representation of ER Model is ER diagram, which acts as a blueprint of DB. Entity: An Entity is a thing or object in the real world that is distinguishable from all other objects. 1. It has physical existence. Each student in a college is an entity. Entity can be uniquely identified. (By a primary attribute, aka Primary Key) Strong Entity: Can be uniquely identified. Weak Entity: Cant be uniquely identified. depends on some other strong entity. 1. It doesnt have sufficient attributes, to select a uniquely identifiable attribute. 2",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "Database Systems": [
+        "Entity-Relationship Model",
+        "Data Modeling",
+        "Database Design",
+        "Normalization",
+        "Database Security",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": ". Weak Entity: Cant be uniquely identified. depends on some other strong entity. 1. It doesnt have sufficient attributes, to select a uniquely identifiable attribute. 2. Loan - Strong Entity, Payment - Weak, as instalments are sequential number counter can be generated separate for each loan. 3. Weak entity depends on strong entity for existence. Entity set 1. Itis a set of entities of the same type that share the same properties, or attributes. 2. E.g,, Student is an entity set. 3. E.g., Customer of a bank Attributes 1. Anentity is represented by a set of attributes. 2. Each entity has a value for each of its attributes. 3. For each attribute, there is a set of permitted values, called the domain, or value set, of that attribute. 4. E.g,, Student Entity has following attributes A. Student_ID Name Standard Course Batch Contact number. Address 5. Types of Attributes 1. Simple 1. Attributes which cant be divided further. 2. E.g",
+    "metadata": {
+      "topic": "Database Management System",
+      "subtopics": [
+        "DBMS",
+        "Weak Entity",
+        "Entity Set",
+        "Attributes"
+      ]
+    }
+  },
+  {
+    "text": ". 4. E.g,, Student Entity has following attributes A. Student_ID Name Standard Course Batch Contact number. Address 5. Types of Attributes 1. Simple 1. Attributes which cant be divided further. 2. E.g., Customers account number in a bank, Students Roll number etc. 2. Composite 1. Can be divided into subparts (that is, other attributes). 2. _E.g., Name of a person, can be divided into first-name, middle-name, last-name. 3. If user wants to refer to an entire attribute or to only a component of the attribute. 4. Address can also be divided, street, city, state, PIN code. 3. Single-valued 1. Only one value attribute. 2. eg, Student ID, loan-number for a loan. 4. Multi-valued 1. Attribute having more than one value. 2. eg, phone-number, nominee-name on some insurance, dependent-name etc. 3. Limit constraint may be applied, upper or lower limits. 5. Derived 1. Value of this type of attribute can be derived from the value of other related attributes. v Rwn Ammon B",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": "2. e.g., Age, loan-age, membership-period etc. 6. NULL Value 1. Anattribute takes a null value when an entity does not have a value for it. 2. It may indicate not applicable, value doesnt exist. e.g, person having no middle-name 3. It may indicate unknown. 1. 2. Unknown can indicate missing entry, e.g., name value of a customer is NULL, means it is missing as name must have some value. Not known, salary attribute value of an employee is null, means it is not known yet. 6. Relationships 1. Association among two or more entities. 2. eg, Person has vehicle, Parent has Child, Customer borrow loan etc. 3. Strong Relationship, between two independent entities. 4. Weak Relationship, between weak entity and its owner/strong entity. 1 eg, Loan instalment-payments Payment. 5. Degree of Relationship 1. Number of entities participating in a relationship. 2. Unary, Only one entity participates. e.g., Employee manages employee. 3. Binary, two entities participates. e.g., Student takes Course. 4",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". Number of entities participating in a relationship. 2. Unary, Only one entity participates. e.g., Employee manages employee. 3. Binary, two entities participates. e.g., Student takes Course. 4. Ternary relationship, three entities participates. E.g, Employee works-on branch, employee works-on job. 5. Bina ry are common. 7. Relationships Constraints 1. Mapping Cardinality / Cardinality Ratio 1. 2. Number of entities to which another entity can be associated via a relationship. One to one, Entity in A associates with at most one entity in B, where A & B are entity sets. And an entity of B is associated with at most one entity of A. 1. E.g,, Citizen has Aadhar Card. One to many, Entity in A associated with N entity in B. While entity in B is associated with at most one entity in A. 1. eg, Citizen has Vehicle. Many to one, Entity in A associated with at most one entity in B. While entity in B can be associated with N entity in A. 1. eg, Course taken by Professor",
+    "metadata": {
+      "topic": "Relationships",
+      "subtopics": [
+        "Types of Relationships",
+        "Cardinality Constraints"
+      ]
+    }
+  },
+  {
+    "text": ". 1. eg, Citizen has Vehicle. Many to one, Entity in A associated with at most one entity in B. While entity in B can be associated with N entity in A. 1. eg, Course taken by Professor. Many to many, Entity in A associated with N entity in B. While entity in B also associated with N entity in A. 1. Customer buys product. 2. Student attend course. 2. Participation Constraints 1. vk Wwn 6. 8. ER Notations Aka, Minimum cardinality constraint. Types, Partial & Total Participation. Partial Participation, not all entities are involved in the relationship instance. Total Participation, each entity must be involved in at least one relationship instance. e.g, Customer borrow loan, loan has total participation as it cant exist without customer entity. And customer has partial participation. Weak entity has total participation constraint, but strong may not have total.",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ],
+      "OOPS": [
+        "Object-Oriented Principles",
+        "Classes and Objects",
+        "Constructors and Destructors",
+        "Method Overloading and Overriding",
+        "Access Modifiers",
+        "Interfaces and Abstract Classes",
+        "Exception Handling",
+        "Composition vs Inheritance",
+        "Design Principles",
+        "Generic Programming"
+      ],
+      "System Design": [
+        "Design Patterns",
+        "Scalability",
+        "Load Balancing",
+        "Caching Strategies",
+        "Database Sharding",
+        "Microservices Architecture",
+        "API Design",
+        "Message Queues",
+        "CDN",
+        "CAP Theorem",
+        "System Architecture Patterns",
+        "Performance Optimization"
+      ],
+      "LLD": [
+        "Design Patterns",
+        "UML Diagrams",
+        "Object Modeling",
+        "Code Organization",
+        "Interface Design",
+        "Design Principles",
+        "Class Relationships",
+        "Modular Design",
+        "Testability",
+        "Refactoring"
+      ]
+    }
+  },
+  {
+    "text": "Symbols used in ER Diagram Relationship ulti-valued Attribute Total Participation Relationship Primary Key Attribute",
+    "metadata": {
+      "DBMS": [
+        "Relationships in ER Diagrams"
+      ],
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ]
+    }
+  },
+  {
+    "text": "LEC-4: Extended ER Features Basic ER Features studied in the LEC-3, can be used to model most DB features but when complexity increases, it is better to use some Extended ER features to model the DB Schema. Specialisation 1. In ER model, we may require to subgroup an entity set into other entity sets that are distinct in some way with other entity sets. 2. Specialisation is splitting up the entity set into further sub entity sets on the basis of their functionalities, specialities and features. 3. It is a Top-Down approach. 4. eg, Person entity set can be divided into customer, student, employee. Person is superclass and other specialised entity sets are subclasses. 1. We have is-a relationship between superclass and subclass. 2. Depicted by triangle component. 5. Why Specialisation / 1. Certain attributes may only be applicable to a few entities of the parent entity set. 2. DB designer can show the distinctive features of the sub entities. 3",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Specialisation in ER Model"
+      ]
+    }
+  },
+  {
+    "text": ". 5. Why Specialisation / 1. Certain attributes may only be applicable to a few entities of the parent entity set. 2. DB designer can show the distinctive features of the sub entities. 3. To group such entities we apply Specialisation, to overall refine the DB blueprint. Generalisation 1. Itis just a reverse of Specialisation. 2. DB Designer, may encounter certain properties of two entities are overlapping. Designer may consider to make a new generalised entity set. That generalised entity set will be a super class. 3. is-a relationship is present between subclass and super class. 4. eg, Car, Jeep and Bus all have some common attributes, to avoid data repetition for the common attributes. DB designer may consider to Generalise to a new entity set Vehicle. 5. Itis a Bottom-up approach. 6. Why Generalisation 1. Makes DB more refined and simpler. 2. Common attributes are not repeated. Attribute Inheritance 1. Both Specialisation and Generalisation, has attribute inheritance. 2",
+    "metadata": {
+      "topic": "OOPS",
+      "subtopics": [
+        "Object-Oriented Principles",
+        "Classes and Objects",
+        "Constructors and Destructors",
+        "Method Overloading and Overriding",
+        "Access Modifiers",
+        "Interfaces and Abstract Classes",
+        "Exception Handling",
+        "Composition vs Inheritance",
+        "Design Principles",
+        "Generic Programming"
+      ]
+    }
+  },
+  {
+    "text": ". 6. Why Generalisation 1. Makes DB more refined and simpler. 2. Common attributes are not repeated. Attribute Inheritance 1. Both Specialisation and Generalisation, has attribute inheritance. 2. The attributes of higher level entity sets are inherited by lower level entity sets. 3. _E.g., Customer & Employee inherit the attributes of Person. Participation Inheritance 1. Ifa parent entity set participates in a relationship then its child entity sets will also participate in that relationship. Aggregation 1. Howto show relationships among relationships - Aggregation is the technique. 2. Abstraction is applied to treat relationships as higher-level entities. We can call it Abstract entity. 3. Avoid redundancy by aggregating relationship as an entity set itself.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": "v Eewne LEC-7: Relational Model Relational Model (RM) organises the data in the form of relations (tables). A relational DB consists of collection of tables, each of which is assigned a unique name. A row ina table represents a relationship among a set of values, and table is collection of such relationships. Tuple: A single row of the table representing a single data point / a unique record. Columns: represents the attributes of the relation. Each attribute, there is a permitted value, called domain of the attribute. Relation Schema: defines the design and structure of the relation, contains the name of the relation and all the columns/attributes. Common RM based DBMS systems, aka RDBMS: Oracle, IBM, My SQL, MS Access. Degree of table: number of attributes/columns in a given table/relation. Cardinality: Total no. of tuples in a given relation.. Relational Key: Set of attributes which can uniquely identify an each tuple",
+    "metadata": {
+      "topic": "Relational Model",
+      "subtopics": [
+        "Data Organisation",
+        "Tuple",
+        "Column",
+        "Relation Schema",
+        "Common DBMS Systems",
+        "Degree of Table",
+        "Cardinality",
+        "Relational Key"
+      ]
+    }
+  },
+  {
+    "text": ". Cardinality: Total no. of tuples in a given relation.. Relational Key: Set of attributes which can uniquely identify an each tuple. Important properties of a Table in Relational Model The name of relation is distinct among all other relation. The values have to be atomic. Cant be broken down further. The name of each attribute/column must be unique. Each tuple must be unique in a table. The sequence of row and column has no significance.. Tables must follow integrity constraints - it helps to maintain data consistency across the tables. AN RW. Relational Model Keys 1. Super Key (SK): Any P&C of attributes present in a table which can uniquely identify each tuple. 2. Candidate Key (CK): minimum subset of super keys, which can uniquely identify each tuple. It contains no redundant attribute. 1. CK value shouldnt be NULL. 3. Primary Key (PK): 1. Selected out of CK set, has the least no. of attributes. 4. Alternate Key (AK) 1. All CK except PK. 5. Foreign Key (FK) 1",
+    "metadata": {
+      "topic": "Relational Model",
+      "subtopics": [
+        "Cardinality",
+        "Relational Key",
+        "Table Properties",
+        "Key Types (Super Key, Candidate Key, Primary Key, Alternate Key, Foreign Key)",
+        "Integrity Constraints"
+      ]
+    }
+  },
+  {
+    "text": ". 1. CK value shouldnt be NULL. 3. Primary Key (PK): 1. Selected out of CK set, has the least no. of attributes. 4. Alternate Key (AK) 1. All CK except PK. 5. Foreign Key (FK) 1. It creates relation between two tables. 2. Arelation, say rl, may include among its attributes the PK of an other relation, say r 2. This attribute is called FK from rl referencing r 2. 3. The relation r 1 is aka Referencing (Child) relation of the FK dependency, and 12 is called Referenced (Parent) relation of the FK. 4. F Khelps to cross reference between two different relations. 6. Composite Key: PK formed using at least 2 attributes. 7. Compound Key: PK which is formed using 2 FK. 8. Surrogate Key: 1. Synthetic PK. 2. Generated automatically by DB, usually an integer value. 3. May be used as PK.. Integrity Constraints 1. CRUD Operations must be done with some integrity policy so that DB is always consistent. 2. Introduced so that we do not accidentally corrupt the DB. 3. Domain Constraints 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions",
+        "Concurrency Control",
+        "Indexing",
+        "Primary Key (PK)",
+        "Alternate Key (AK)",
+        "Foreign Key (FK)",
+        "Database Security",
+        "Query Optimization",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": ". Integrity Constraints 1. CRUD Operations must be done with some integrity policy so that DB is always consistent. 2. Introduced so that we do not accidentally corrupt the DB. 3. Domain Constraints 1. _ Restricts the value in the attribute of relation, specifies the Domain. 2. Restrict the Data types of every attribute. 3. _E.g., We want to specify that the enrolment should happen for candidate birth year 2002. 4. Entity Constraints 1. Every relation should have PK. PK = NULL.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Integrity Constraints",
+        "CRUD Operations",
+        "Domain Constraints",
+        "Entity Constraints"
+      ]
+    }
+  },
+  {
+    "text": "5. Referential Constraints 1. 2. 4. Specified between two relations & helps maintain consistency among tuples of two relations. It requires that the value appearing in specified attributes of any tuple in referencing relation also appear in the specified attributes of at least one tuple in the referenced relation. If FK in referencing table refers to PK of referenced table then every value of the FK in referencing table must be NULL or available in referenced table. FK must have the matching PK for its each value in the parent table or it must be NULL. 6. Key Constraints: The six types of key constraints present in the Database management system are:- 1. NOT NULL: This constraint will restrict the user from not having a NULL value. It ensures that every element in the database has a value. UNIQUE: It helps us to ensure that all the values consisting in a column are different from each other. DEFAULT: it is used to set the default value to the column",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Key Constraints"
+      ]
+    }
+  },
+  {
+    "text": ". UNIQUE: It helps us to ensure that all the values consisting in a column are different from each other. DEFAULT: it is used to set the default value to the column. The default value is added to the columns if no value is specified for them. CHECK: It is one of the integrity constraints in DBMS. It keeps the check that integrity of data is maintained before and after the completion of the CRUD. PRIMARY KEY: This is an attribute or set of attributes that can uniquely identify each entity in the entity set. The primary key must contain unique as well as not null values. FOREIGN KEY: Whenever there is some relationship between two entities, there must be some common attribute between them. This common attribute must be the primary key of an entity set and will become the foreign key of another entity set. This key will prevent every action which can result in loss of connection between tables.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "UNIQUE",
+        "DEFAULT",
+        "CHECK",
+        "PRIMARY KEY",
+        "FOREIGN KEY"
+      ]
+    }
+  },
+  {
+    "text": "LEC-8: Transform - ER Model to Relational Model Both ER-Model and Relational Model are abstract logical representation of real world enterprises. Because the two models implies the similar design principles, we can convert ER design into Relational design. Converting a DB representation from an ER diagram to a table format is the way we arrive at Relational DB-design from an ER diagram. ER diagram notations to relations: 1. Strong Entity 1. Becomes an individual table with entity name, attributes becomes columns of the relation. 2. Entitys Primary Key (PK) is used as Relations PK. 3. FK are added to establish relationships with other relations. Weak Entity 1. A table is formed with all the attributes of the entity. 2. PK of its corresponding Strong Entity will be added as FK. 3. PK of the relation will be a composite PK, {FK + Partial discriminator Key}. Single Values Attributes 1. Represented as columns directly in the tables/relations. Composite Attributes 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "ER-Model to Relational Model Conversion",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". 3. PK of the relation will be a composite PK, {FK + Partial discriminator Key}. Single Values Attributes 1. Represented as columns directly in the tables/relations. Composite Attributes 1. Handled by creating a separate attribute itself in the original relation for each composite attribute. 2. eg, Address: {street-name, house-no}, is a composite attribute in customer relation, we add address-streetname & address-house-name as new columns in the attribute and ignore address as an attribute. Multivalued Attributes 1. New tables (named as original attribute name) are created for each multivalued attribute. PK of the entity is used as column FK in the new table. Multivalued attributes similar name is added as a column to define multiple values. PK of the new table would be {FK + multivalued name}. e.g., For Strong entity Employee, dependent-name is a multivalued attribute. 1. New table named dependent-name will be formed with columns emp-id, and dname. 2. PK: {emp-id, name} 3",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design"
+      ]
+    }
+  },
+  {
+    "text": ". e.g., For Strong entity Employee, dependent-name is a multivalued attribute. 1. New table named dependent-name will be formed with columns emp-id, and dname. 2. PK: {emp-id, name} 3. _FK: {emp-id} Derived Attributes: Not considered in the tables. Generalisation 1. Method-1: Create a table for the higher level entity set. For each lower-level entity set, create a table that includes a column for each of the attributes of that entity set plus a column for each attribute of the primary key of the higher-level entity set. For e.g., Banking System generalisation of Account - saving & current. 1. Table 1: account (account-number, balance) 2. Table 2: savings-account (account-number, interest-rate, daily-withdrawal-limit) 3. Table 3: current-account (account-number, overdraft-amount, per-transaction-charges) 2",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". Table 2: savings-account (account-number, interest-rate, daily-withdrawal-limit) 3. Table 3: current-account (account-number, overdraft-amount, per-transaction-charges) 2. Method-2: An alternative representation is possible, if the generalisation is disjoint and completethat is, if no entity is a member of two lower-level entity sets directly below a higher-level entity set, and if every entity in the higher level entity set is also a member of one of the lower-level entity sets. Here, do not create a table for the higher-level entity set. Instead, for each lower-level entity set, create a table that includes a column for each of the attributes of that entity set plus a column for each attribute of the higher-level entity sets. Tables would be: 1. Table 1: savings-account (account-number, balance, interest-rate, daily-withdrawal-limit) 2. Table 2: current-account (account-number, balance, overdraft-amount, per-transaction-charges) 3",
+    "metadata": {
+      "topic": "Database Management System",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions"
+      ]
+    }
+  },
+  {
+    "text": ". Table 1: savings-account (account-number, balance, interest-rate, daily-withdrawal-limit) 2. Table 2: current-account (account-number, balance, overdraft-amount, per-transaction-charges) 3. Drawbacks of Method-2: If the second method were used for an overlapping generalisation, some values such as balance would be stored twice unnecessarily. Similarly, if the generalisation were not completethat is, if some accounts were neither savings nor current accountsthen such accounts could not be represented with the second method. VRWN: 8. Aggregation",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Transactions"
+      ]
+    }
+  },
+  {
+    "text": "1. Table of the relationship set is made. 2. Attributes includes primary keys of entity set and aggregation sets entities. 3. Also, add descriptive attribute if any on the relationship.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Table of Relationship Set"
+      ]
+    }
+  },
+  {
+    "text": "LEC-9: SQL in 1-Video 1. SQL: Structured Query Language, used to access and manipulate data. 2. SQ Lused CRUD operations to communicate with DB. 1. CREATE - execute INSERT statements to insert new tuple into the relation. 2. READ - Read data already in the relations. 3. UPDATE - Modify already inserted data in the relation. 4. DELETE - Delete specific data point/tuple/row or multiple rows. 3. SQ Lis not DB, is a query language. 4. What is RDBMS (Relational Database Management System) 1. Software that enable us to implement designed relational model. 2. eg. My SQL, MS SQL, Oracle, IBM etc. 3. Table/Relation is the simplest form of data storage object in R-DB. 4. My SQL is open-source RDBMS, and it uses SQL for all CRUD operations 5. My SQL used client-server model, where client is CLI or frontend that used services provided by My SQL server. Difference between SQL and My SQL 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "SQL Queries",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design"
+      ]
+    }
+  },
+  {
+    "text": ". My SQL used client-server model, where client is CLI or frontend that used services provided by My SQL server. Difference between SQL and My SQL 1. SQ Lis Structured Query language used to perform CRUD operations in R-DB, while My SQL is a RDBMS used to store, manage and administrate DB (provided by itself) using SQL. SQL DATA TYPES (Ref: https://www.w 3 schools.com/sql/sql_datatypes.asp) 1. In SQL DB, data is stored in the form of tables. 2. Data can be of different types, like INT, CHAR etc. DATATYPE Description CHAR string(0-255), string with size = (0, 255], e.g",
+    "metadata": {
+      "topic": "My SQL",
+      "subtopics": [
+        "Database Management",
+        "Data Types",
+        "Client-Server Model"
+      ]
+    }
+  },
+  {
+    "text": ".asp) 1. In SQL DB, data is stored in the form of tables. 2. Data can be of different types, like INT, CHAR etc. DATATYPE Description CHAR string(0-255), string with size = (0, 255], e.g., CHAR(251) VARCHAR string(0-255) TINYTEXT String(0-255) TEXT string(0-65535) BLOB string(0-65535) MEDIUMTEXT string(0-16777215) MEDIUMBLOB string(0-16777215) LONGTEXT string(0-4294967295) LONGBLOB string(0-4294967295) TINYINT integer(-128 to 127) SMALLINT integer(-32768 to 32767) MEDIUMINT integer(-8388608 to 8388607) INT integer(-2147483648 to 2147483647) BIGINT integer (-9223372036854775808 to 9223372036854775807) FLOAT Decimal with precision to 23 digits DOUBLE Decimal with 24 to 53 digits",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries"
+      ]
+    }
+  },
+  {
+    "text": "DATATYPE Description DECIMAL Double stored as string DATE YYYY-MM-DD DATETIME YYYY-MM-DD HH:MM:SS TIMESTAMP YYYYMMDDHHMMSS TIME HH:MM:SS ENUM One of the preset values SET One or many of the preset values BOOLEAN o/1 BIT e.g., BIT(n), n upto 64, store values in bits. 3. Size: TINY SMALL MEDIUM INT BIGINT. 4. Variable length Data types e.g., VARCHAR, are better to use as they occupy space equal to the actual data size. 5. Values can also be unsigned e.g., INT UNSIGNED. 6. Types of SQL commands: 1. DDL (data definition language): defining relation schema. 1. CREATE: create table, DB, view. 2. ALTER TABLE: modification in table structure. e.g, change column datatype or add/remove columns. 3. DROP: delete table, DB, view. 4. TRUNCATE: remove all the tuples from the table. 5. RENAME: rename DB name, table name, column name etc. 2. DRL/DQL (data retrieval language / data query language): retrieve data from the tables. 1. SELECT 3",
+    "metadata": {
+      "topic": "Data Types",
+      "subtopics": [
+        "DECIMAL",
+        "DATE",
+        "DATETIME",
+        "TIMESTAMP",
+        "TIME",
+        "ENUM",
+        "SET",
+        "BOOLEAN",
+        "BIT"
+      ]
+    }
+  },
+  {
+    "text": ". 5. RENAME: rename DB name, table name, column name etc. 2. DRL/DQL (data retrieval language / data query language): retrieve data from the tables. 1. SELECT 3. DML (data modification language): use to perform modifications in the DB 1. INSERT: insert data into a relation 2. UPDATE: update relation data. 3. DELETE: delete row(s) from the relation. 4. DCL (Data Control language): grant or revoke authorities from user. 1. GRANT: access privileges to the DB 2. REVOKE: revoke user access privileges. 5. TCL (Transaction control language): to manage transactions done in the DB 1. START TRANSACTION: begin a transaction 2. COMMIT: apply all the changes and end transaction 3. ROLLBACK: discard changes and end transaction 4. SAVEPOINT: checkout within the group of transactions in which to rollback. MANAGING DB (DDL) 1. Creation of DB 1. 2. CREATE DATABASE IF NOT EXISTS db-name; USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed",
+    "metadata": {
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": ". MANAGING DB (DDL) 1. Creation of DB 1. 2. CREATE DATABASE IF NOT EXISTS db-name; USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed. //make switching between D Bs possible. DROP DATABASE IF EXISTS db-name; //dropping database. SHOW DATABASES; //list all the D Bs in the server. SHOW TABLES; //list tables in the selected DB.",
+    "metadata": {
+      "DBMS": [
+        "Creation of DB",
+        "CREATE DATABASE IF NOT EXISTS db-name;",
+        "USE db-name;",
+        "DROP DATABASE IF EXISTS db-name;",
+        "SHOW DATABASES;",
+        "SHOW TABLES;"
+      ]
+    }
+  },
+  {
+    "text": ". NOT: WHERE col_name NOT IN (1,2,3,4); IS NULL 1. eg., SELECT * FROM customer WHERE prime_status is NULL; Pattern Searching / Wildcard (%,_ 1. %, any number of character from 0 to n. Similar to * asterisk in regex. 2. only one character. 3. SELECT * FROM customer WHERE name LIKE %p_;. ORDER BY 1. Sorting the data retrieved using WHERE clause. 2. ORDER BY column-name DESC; 3. DESC = Descending and ASC = Ascending 4. eg., SELECT * FROM customer ORDER BY name DESC; GROUP BY 1. GROUP BY Clause is used to collect data from multiple records and group the result by one or more column. It is generally used in a SELECT statement. 2. Groups into category based on column given. 3. SELECT cl, c 2, c 3 FROM sample_table WHERE cond GROUP BY cl, 2, 3. 4. Allthe column names mentioned after SELECT statement shall be repeated in GROUP BY, in order to successfully execute the query. 5. Used with aggregation functions to perform various actions. 1. COUNT() 2. SUM() 3. AVG() 4. MIN() 5. MAX(). DISTINCT 1",
+    "metadata": {
+      "topic": "SQL",
+      "subtopics": [
+        "Pattern Searching / Wildcard (%)",
+        "Sorting (ORDER BY)",
+        "GROUP BY Clause",
+        "Aggregation Functions (COUNT(), SUM(), AVG(), MIN(), MAX())",
+        "DISTINCT"
+      ]
+    }
+  },
+  {
+    "text": ". 5. Used with aggregation functions to perform various actions. 1. COUNT() 2. SUM() 3. AVG() 4. MIN() 5. MAX(). DISTINCT 1. Find distinct values in the table. 2. SELECT DISTINCT(col_name) FROM table_name; 3. GROUP BY can also be used for the same 1. Select col_name from table GROUP BY col_name; same output as above DISTINCT query.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "SQL Queries",
+        "Indexing",
+        "Transactions"
+      ]
+    }
+  },
+  {
+    "text": "2. SQ Lis smart enough to realise that if you are using GROUP BY and not using any aggregation function, then you mean DISTINCT. 13. GROUP BY HAVING RWNS Out of the categories made by GROUP BY, we would like to know only particular thing (cond). Similar to WHERE. Select COUNT(cust_id), country from customer GROUP BY country HAVING COUNT(cust_id) 50; WHERE vs HAVING Both have same function of filtering the row base on certain conditions. WHERE clause is used to filter the rows from the table based on specified condition HAVING clause is used to filter the rows from the groups based on the specified condition. HAVING is used after GROUP BY while WHERE is used before GROUP BY clause. If you are using HAVING, GROUP BY is necessary. WHERE can be used with SELECT, UPDATE & DELETE keywords while GROUP BY used with SELECT. AN AWN CONSTRAINTS (DDL) 1. Primary Key 1. PK is not null, unique and only one per table. 2. Foreign Key 1. 2. 3. FK refers to PK of other table",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". AN AWN CONSTRAINTS (DDL) 1. Primary Key 1. PK is not null, unique and only one per table. 2. Foreign Key 1. 2. 3. FK refers to PK of other table. Each relation can having any number of FK. CREATE TABLE ORDER ( id INT PRIMARY KEY, delivery_date DATE, order_placed_date DATE, cust_id INT, FOREIGN KEY (cust_id) REFERENCES customer(id) ) 3. UNIQUE 1. 2. Unique, can be null, table can have multiple unique attributes. CREATE TABLE customer ( email VARCHAR(1024) UNIQUE, 4. CHECK 1. 2. CREATE TABLE customer ( CONSTRAINT age_check CHECK (age 12), age_check, can also avoid this, My SQL generates name of constraint automatically.",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ]
+    }
+  },
+  {
+    "text": "5. DEFAULT 1. Set default value of the column. 2. CREATE TABLE account ( saving-rate DOUBLE NOT NULL DEFAULT 4.25, ); 6. Anattribute can be PK and FK both ina table. 7. ALTER OPERATIONS 1. Changes schema 2. ADD 1. Add new column. 2. ALTER TABLE table_name ADD new_col_name datatype ADD new_col_name_2 datatype; 3. eg., ALTER TABLE customer ADD age INT NOT NULL; 3. MODIFY 1. Change datatype of an attribute. 2. ALTER TABLE table-name MODIFY col-name col-datatype; 3. _E.g., VARCHAR TO CHAR ALTER TABLE customer MODIFY name CHAR(1024); 4. CHANGE COLUMN 1. Rename column name. 2. ALTER TABLE table-name CHANGE COLUMN old-col-name new-col-name new-col-datatype; 3. eg, ALTER TABLE customer CHANGE COLUMN name customer-name VARCHAR(1024); 5. DROP COLUMN 1. Drop a column completely. 2. ALTER TABLE table-name DROP COLUMN col-name; 3. eg. ALTER TABLE customer DROP COLUMN middle-name; 6. RENAME 1. Rename table name itself. 2. ALTER TABLE table-name RENAME TO new-table-name; 3",
+    "metadata": {
+      "topic": "SQL",
+      "subtopics": [
+        "Data Types and Default Values",
+        "Creating Tables and Columns",
+        "Adding and Removing Columns",
+        "Changing Data Types",
+        "Renaming Columns",
+        "Dropping Columns"
+      ]
+    }
+  },
+  {
+    "text": ". 2. ALTER TABLE table-name DROP COLUMN col-name; 3. eg. ALTER TABLE customer DROP COLUMN middle-name; 6. RENAME 1. Rename table name itself. 2. ALTER TABLE table-name RENAME TO new-table-name; 3. eg, ALTER TABLE customer RENAME TO customer-details; DATA MANIPULATION LANGUAGE (DML) 1. INSERT 1. _ INSERT INTO table-name(coll, col 2, col 3) VALUES (v 1, v 2, v 3), (val, val 2, val 3); 2. UPDATE 1. UPDATE table-name SET coll =1, col 2 = abc WHERE id = 1; 2. Update multiple rows e.g, 1. UPDATE student SET standard = standard +1; 3. ON UPDATE CASCADE 1. Can be added to the table while creating constraints. Suppose there is a situation where we have two tables such that primary key of one table is the foreign key for another table. if we update the primary key of the first table then using the ON UPDATE CASCADE foreign key of the second table automatically get updated. 3. DELETE 1. DELETE FROM table-name WHERE id = 1; 2. DELETE FROM table-name; //all rows will be deleted. 3",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "DATA MANIPULATION LANGUAGE (DML)",
+        "ALTER TABLE statements",
+        "INSERT statements",
+        "UPDATE statements",
+        "DELETE statements"
+      ]
+    }
+  },
+  {
+    "text": ". 3. DELETE 1. DELETE FROM table-name WHERE id = 1; 2. DELETE FROM table-name; //all rows will be deleted. 3. DELETE CASCADE - (to overcome DELETE constraint of Referential constraints) 1. What would happen to child entry if parent tables entry is deleted 2. CREATE TABLE ORDER ( order_id int PRIMARY KEY, delivery_date DATE, cust_id INT, fond",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ]
+    }
+  },
+  {
+    "text": "FOREIGN KEY(cust_id) REFERENCES customer(id) ON DELETE CASCADE ); 3. ON DELETE NULL - (can FK have null values) 1. CREATE TABLE ORDER ( order_id int PRIMARY KEY, delivery_date DATE, cust_id INT, FOREIGN KEY(cust_id) REFERENCES customer(id) ON DELETE SET NULL ); 4. REPLACE Primarily used for already present tuple in a v Eewne JOINING TABLES All RDBMS are relational in nature, we refer to other tables to get meaningful outcomes. 1. 2. 3. FK are used to do reference to other table. INNER JOIN table. As UPDATE, using REPLACE with the help of WHERE clause in PK, then that row will be replaced. As INSERT, if there is no duplicate data new tuple will be inserted. REPLACE INTO student (id, class) VALUES(4, REPLACE INTO table SET coll = vall, col 2 = val 2; 3); 1. Returns a resultant table that has matching values from both the tables or all the tables. 2. SELECT column-list FROM tablel INNER JOIN table 2 ON condition INNER JOIN table 3 ON condition 2 3. Alias in My SQL (AS) 1",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "DBMS": [
+        "Design Patterns",
+        "UML Diagrams",
+        "Object Modeling",
+        "Code Organization",
+        "Interface Design",
+        "Design Principles",
+        "Class Relationships",
+        "Modular Design",
+        "Testability",
+        "Refactoring"
+      ],
+      "System Design": [
+        "Design Patterns",
+        "Scalability",
+        "Load Balancing",
+        "Caching Strategies",
+        "Database Sharding",
+        "Microservices Architecture",
+        "API Design",
+        "Message Queues",
+        "CDN",
+        "CAP Theorem",
+        "System Architecture Patterns",
+        "Performance Optimization"
+      ]
+    }
+  },
+  {
+    "text": ". 2. SELECT column-list FROM tablel INNER JOIN table 2 ON condition INNER JOIN table 3 ON condition 2 3. Alias in My SQL (AS) 1. Aliases in My SQL is used to give a temporary name to a table or a column in a table for the purpose of a particular query. It works as a nickname for expressing the tables or column names. It makes the query short and neat. 2. SELECT col_name AS alias_name FROM table_name; 3. SELECT col_namel, col_name 2,... FROM tab OUTER JOIN 1. LEFTJOIN 1. This returns a resulting table that all the data from left table and the matched data from the right table. 2. SELECT columns FROM table LEFT JOIN tab 2. RIGHT JOIN 1. This returns a resulting table that all the data from right table and the matched data from the left table. 2. SELECT columns FROM table RIGHT JOIN ta 3. FULLJOIN 1. 2. Emulated in My SQL using LEFT and RIGHT 3. LEFT JOIN UNION RIGHT JOIN. 4",
+    "metadata": {
+      "topic": "Database Management System",
+      "subtopics": [
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Joins and Subqueries"
+      ]
+    }
+  },
+  {
+    "text": ". 2. SELECT columns FROM table RIGHT JOIN ta 3. FULLJOIN 1. 2. Emulated in My SQL using LEFT and RIGHT 3. LEFT JOIN UNION RIGHT JOIN. 4. SELECT columns FROM table as ti LEFT JO UNION e_name AS alias_name; e 2 ON Join_Condition; ble 2 ON join_cond; This returns a resulting table that contains all data when there is a match on left or right table data. (e) N. N table 2 as t 2 ON tld = t 2.id SELECT columns FROM table as tl RIGHT JOIN table 2 as t 2 ON tl.id = t 2.id; 5. UNION ALL, can also be used this will duplicate values as well while UNION gives unique values. CROSS JOIN 1. This returns all the cartesian products of the data present in both tables. Hence, all possible variations are reflected in the output. 2. Used rarely in practical purpose. 3. Table-1 has 10 rows and table-2 has 5, then resultant would have 50 rows. 4. SELECT column-lists FROM tablel CROSS JOIN ta SELF JOIN ble 2; (= me) FULL OUTER JOIN table 1 table 2 CROSS JOIN o a me",
+    "metadata": {
+      "topic": "SQL",
+      "subtopics": [
+        "SELECT Statements",
+        "JOIN Operations",
+        "UNION Operations",
+        "CROSS JOIN",
+        "FULL OUTER JOIN"
+      ]
+    }
+  },
+  {
+    "text": "Itis used to get the output from a particular table when the same table is joined to itself. Used very less. Emulated using INNER JOIN.. SELECT columns FROM table as tl INNER JOIN table as t 2 ON t 1 id = t 2.id; 7. Join without using join keywords. 1. SELECT * FROM tablel, table 2 WHERE condition; 2. eg, SELECT artist_name, album_name, year_recorded FROM artist, album WHERE artist.id = album.artist_id; RWN SET OPERATIONS 1. Used to combine multiple select statements. 2. Always gives distinct rows. JOIN SET Operations Combines multiple tables based on matching Combination is resulting set from two or more condition. SELECT statements. Column wise combination. Row wise combination. Data types of two tables can be different. Datatypes of corresponding columns from each table should be the same. Can generate both distinct or duplicate rows. Generate distinct rows. The number of column(s) selected may or may not The number of column(s) selected must be the be the same from each table",
+    "metadata": {
+      "topic": "SQL",
+      "subtopics": [
+        "JOIN",
+        "SELECT Statement",
+        "SET Operations"
+      ]
+    }
+  },
+  {
+    "text": ". Can generate both distinct or duplicate rows. Generate distinct rows. The number of column(s) selected may or may not The number of column(s) selected must be the be the same from each table. same from each table. Combines results horizontally. Combines results vertically. 3. UNION 1. Combines two or more SELECT statements. 2. SELECT * FROM table UNION SELECT * FROM table 2; 3. Number of column, order of column must be same for table and table 2. 4. INTERSECT 1. Returns common values of the tables. 2. Emulated. 3. SELECT DISTINCT column-list FROM table-1 INNER JOIN table-2 USING(join_cond); 4. SELECT DISTINCT * FROM table INNER JOIN table 2 ON USING(id); 5. MINUS 1. This operator returns the distinct row from the first table that does not occur in the second table. 2. Emulated. 3. SELECT column_list FROM tablel LEFT JOIN table 2 ON condition WHERE table 2.column_name IS NULL; 4. eg, SELECT id FROM table-1 LEFT JOIN table-2 USING(id) WHERE table-2.id IS NULL; SUB QUERIES 1",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "Computer Network": [
+        "TCP/IP",
+        "OSI Model",
+        "Network Topologies",
+        "Routing Algorithms",
+        "Network Security",
+        "DNS",
+        "HTTP/HTTPS",
+        "Socket Programming",
+        "Network Protocols",
+        "Wireless Networks",
+        "Network Layers",
+        "Subnetting",
+        "VPN"
+      ],
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ],
+      "OOPS": [
+        "Object-Oriented Principles",
+        "Classes and Objects",
+        "Constructors and Destructors",
+        "Method Overloading and Overriding",
+        "Access Modifiers",
+        "Interfaces and Abstract Classes",
+        "Exception Handling",
+        "Composition vs Inheritance",
+        "Design Principles",
+        "Generic Programming"
+      ],
+      "System Design": [
+        "Design Patterns",
+        "Scalability",
+        "Load Balancing",
+        "Caching Strategies",
+        "Database Sharding",
+        "Microservices Architecture",
+        "API Design",
+        "Message Queues",
+        "CDN",
+        "CAP Theorem",
+        "System Architecture Patterns",
+        "Performance Optimization"
+      ],
+      "LLD": [
+        "Design Patterns",
+        "UML Diagrams",
+        "Object Modeling",
+        "Code Organization",
+        "Interface Design",
+        "Design Principles",
+        "Class Relationships",
+        "Modular Design",
+        "Testability",
+        "Refactoring"
+      ],
+      "Git": [
+        "Version Control",
+        "Branching and Merging",
+        "Git Workflows",
+        "Rebasing",
+        "Stashing",
+        "Cherry-picking",
+        "Git Hooks",
+        "Conflict Resolution",
+        "Git Commands",
+        "Repository Management"
+      ],
+      "Linux": [
+        "Linux Commands",
+        "File Permissions",
+        "Process Management",
+        "Shell Scripting",
+        "System Administration",
+        "Package Management",
+        "Networking Commands",
+        "Text Processing",
+        "Cron Jobs",
+        "System Monitoring",
+        "User Management"
+      ],
+      "Aptitude": [
+        "Quantitative Aptitude",
+        "Logical Reasoning",
+        "Verbal Ability",
+        "Data Interpretation",
+        "Probability and Statistics",
+        "Permutations and Combinations",
+        "Time and Work",
+        "Profit and Loss",
+        "Ages and Ratios",
+        "Coding Problems",
+        "Pattern Recognition"
+      ]
+    }
+  },
+  {
+    "text": ". 3. SELECT column_list FROM tablel LEFT JOIN table 2 ON condition WHERE table 2.column_name IS NULL; 4. eg, SELECT id FROM table-1 LEFT JOIN table-2 USING(id) WHERE table-2.id IS NULL; SUB QUERIES 1. Outer query depends on inner query. 2. Alternative to joins. 3. Nested queries. QUERY 9 Parent Query 4. SELECT column_list (s) FROM table_name WHERE column_name OPERATOR (SELECT column_list (s) FROM table_name [WHERE]); e.g., SELECT * FROM tablel WHERE coll IN (SELECT coll FROM table); Sub queries exist mainly in 3 clauses 1. Inside a WHERE clause. SQL Subquery SUB QUERY Ge ectecifinner Query au",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management"
+      ],
+      "Linux": [
+        "File Permissions",
+        "Shell Scripting"
+      ]
+    }
+  },
+  {
+    "text": "2. Inside a FROM clause. 3. Inside a SELECT clause. 7. Subquery using FROM clause 1. SELECT MAX(rating) FROM (SELECT * FROM movie WHERE country = India) as temp; 8. Subquery using SELECT 1. SELECT (SELECT column_list(s) FROM T_name WHERE condition), column List(s) FROM T 2_name WHERE condition; 9. Derived Subquery 1. SELECT column Lists(s) FROM (SELECT column Lists(s) FROM table_name WHERE [condition]) as new_table_name; 10. Co-related sub-queries 1. With a normal nested subquery, the inner SELECT query SELECT columni, column 2 runs first and executes once, returning values to be used by FROM tablel as outer the main query. A correlated subquery, however, executes tale olen cee SELECT fecur, GAIT:: column 1, column: once for each candidate row considered by the outer query. FROM table 2 In other words, the inner query is driven by the outer query. WHERE expri = outer",
+    "metadata": {
+      "topic": "SQL",
+      "subtopics": [
+        "FROM Clause",
+        "SELECT Clause",
+        "Subqueries",
+        "Derived Subqueries",
+        "Correlated Subqueries"
+      ]
+    }
+  },
+  {
+    "text": ". FROM table 2 In other words, the inner query is driven by the outer query. WHERE expri = outer.expr 2); JOIN VS SUB-QUERIES JOINS SUBQUERIES Faster Slower Joins maximise calculation burden on DBMS Keeps responsibility of calculation on user. Complex, difficult to understand and implement Comparatively easy to understand and implement. Choosing optimal join for optimal use case is Easy. difficult My SQL VIEWS 1. Aview is a database object that has no values. Its contents are based on the base table. It contains rows and columns similar to the real table. 2. In My SQL, the View is a virtual table created by a query by joining one or more tables. It is operated similarly to the base table but does not contain any data of its own. 3. The View and table have one main difference that the views are definitions built on top of other tables (or views). If any changes occur in the underlying table, the same changes reflected in the View also",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries"
+      ]
+    }
+  },
+  {
+    "text": ". If any changes occur in the underlying table, the same changes reflected in the View also. CREATE VIEW view_name AS SELECT columns FROM tables [WHERE conditions]; ALTER VIEW view_name AS SELECT columns FROM table WHERE conditions; DROP VIEW IF EXISTS view_name; CREATE VIEW Trainer AS SELECT c.course_name, ctrainer, t.email FROM courses c, contact t WHERE c.id = t.id; (View using Join clause). NOWS NOTE: We can also import/export table schema from files (.csv or json).",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ],
+      "Linux": [
+        "Linux Commands",
+        "File Permissions",
+        "Process Management",
+        "Shell Scripting",
+        "System Administration",
+        "Package Management",
+        "Networking Commands",
+        "Text Processing",
+        "Cron Jobs",
+        "System Monitoring",
+        "User Management"
+      ]
+    }
+  },
+  {
+    "text": "LEC-11: Normalisation Normalisation is a step towards DB optimisation. Functional Dependency (FD) 1. _ Itsa relationship between the primary key attribute (usually) of the relation to that of the other attribute of the relation. 2. X-/Y, the left side of FD is known as a Determinant, the right side of the production is known as a Dependent. 3. Types of FD 1. Trivial FD 1. AB has trivial functional dependency if B is a subset of A. A-A, B-B are also Trivial FD. 2. Non-trivial FD 1. ABhasa non-trivial functional dependency if B is not a subset of A. [A intersection B is NULL]. 4. Rules of FD (Armstrongs axioms) 1. Reflexive 1. If Ais a set of attributes and B is a subset of A. Then, A B holds. 2. If A 2 Bthen AB. 2. Augmentation 1. If Bcan be determined from A, then adding an attribute to this functional dependency wont change anything. 2. If AB holds, then AX BX holds too. x being a set of attributes. 3. Transitivity 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Functional Dependency (FD)",
+        "Rules of FD (Armstrong's axioms)"
+      ]
+    }
+  },
+  {
+    "text": ". If Bcan be determined from A, then adding an attribute to this functional dependency wont change anything. 2. If AB holds, then AX BX holds too. x being a set of attributes. 3. Transitivity 1. _ If Adetermines B and B determines C, we can say that A determines C. 2. if A Band BCthen AC. Why Normalisation 1. To avoid redundancy in the DB, not to store redundant data. What happen if we have redundant data 1. _ Insertion, deletion and updation anomalies arises. Anomalies 1. Anomalies means abnormalities, there are three types of anomalies introduced by data redundancy. 2. Insertion anomaly 1. When certain data (attribute) can not be inserted into the DB without the presence of other data. 3. Deletion anomaly 1. The delete anomaly refers to the situation where the deletion of data results in the unintended loss of some other important data. 4. Updation anomaly (or modification anomaly) 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Normalization",
+        "Transactions",
+        "Concurrency Control",
+        "Anomalies"
+      ]
+    }
+  },
+  {
+    "text": ". Deletion anomaly 1. The delete anomaly refers to the situation where the deletion of data results in the unintended loss of some other important data. 4. Updation anomaly (or modification anomaly) 1. The update anomaly is when an update of a single data value requires multiple rows of data to be updated. 2. Due to updation to many places, may be Data inconsistency arises, if one forgets to update the data at all the intended places. 5. Due to these anomalies, DB size increases and DB performance become very slow. 6. To rectify these anomalies and the effect of these of DB, we use Database optimisation technique called NORMALISATION. What is Normalisation 1. Normalisation is used to minimise the redundancy from a relations. It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies. 2. Normalisation divides the composite attributes into individual attributes OR larger table into smaller and links them using relationships. 3",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ]
+    }
+  },
+  {
+    "text": ". 2. Normalisation divides the composite attributes into individual attributes OR larger table into smaller and links them using relationships. 3. The normal form is used to reduce redundancy from the database table. Types of Normal forms 1. 1 NF 1. Every relation cell must have atomic value. 2. Relation must not have multi-valued attributes.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization"
+      ]
+    }
+  },
+  {
+    "text": "2. 2 NF 1. Relation must be in 1 NF. 2. There should not be any partial dependency. 1. Allnon-prime attributes must be fully dependent on PK. 2. Non prime attribute can not depend on the part of the PK. 3. 3 NF 1. Relation must be in 2 NF. 2. No transitivity dependency exists. 1. Non-prime attribute should not find a non-prime attribute. 4. BCNF (Boyce-Codd normal form) 1. Relation must be in 3 NF. 2. FD:A-B,A must bea super key. 1. We must not derive prime attribute from any prime or non-prime attribute. 8. Advantages of Normalisation 1. Normalisation helps to minimise data redundancy. 2. Greater overall database organisation. 3. Data consistency is maintained in DB.",
+    "metadata": {
+      "topic": "Normalization",
+      "subtopics": [
+        "NF 1",
+        "NF 2",
+        "BCNF"
+      ]
+    }
+  },
+  {
+    "text": "LEC-12: Transaction 1. Transaction 1. Aunit of work done against the DB in a logical sequence. 2. Sequence is very important in transaction. 3. It is a logical unit of work that contains one or more SQL statements. The result of all these statements in a transaction either gets completed successfully (all the changes made to the database are permanent) or if at any point any failure happens it gets rollbacked (all the changes being done are undone.) 2. ACID Properties 1. To ensure integrity of the data, we require that the DB system maintain the following properties of the transaction. 2. Atomicity 1. _ Either all operations of transaction are reflected properly in the DB, or none are. 3. Consistency 1. Integrity constraints must be maintained before and after transaction. 2. DB must be consistent after transaction happens. 4. Isolation 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions",
+        "ACID Properties",
+        "Atomicity",
+        "Consistency",
+        "Isolation"
+      ]
+    }
+  },
+  {
+    "text": ". 3. Consistency 1. Integrity constraints must be maintained before and after transaction. 2. DB must be consistent after transaction happens. 4. Isolation 1. Even though multiple transactions may execute concurrently, the system guarantees that, for every pair of transactions Ti and Tj, it appears to Ti that either Tj finished execution before Ti started, or Tj started execution after Ti finished. Thus, each transaction is unaware of other transactions executing concurrently in the system. 2. Multiple transactions can happen in the system in isolation, without interfering each other. 5. Durability 1. After transaction completes successfully, the changes it has made to the database persist, even if there are system failures. 3. Transaction states RIW Permanent operations Failure Roll back Transaction States in DBMS 1. Active state 1. The very first state of the life cycle of the transaction, all the read and write operations are being performed",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Consistency",
+        "Isolation",
+        "Durability"
+      ]
+    }
+  },
+  {
+    "text": ". Active state 1. The very first state of the life cycle of the transaction, all the read and write operations are being performed. If they execute without any error the T comes to Partially committed state. Although if any error occurs then it leads to a Failed state. 2. Partially committed state 1. After transaction is executed the changes are saved in the buffer in the main memory. If the changes made are permanent on the DB then the state will transfer to the committed state and if there is any failure, the T will go to Failed state. 3. Committed state",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions"
+      ]
+    }
+  },
+  {
+    "text": "1. When updates are made permanent on the DB. Then the T is said to be in the committed state. Rollback cant be done from the committed states. New consistent state is achieved at this stage. Failed state 1. When Tis being executed and some failure occurs. Due to this it is impossible to continue the execution of the T. Aborted state 1. When T reaches the failed state, all the changes made in the buffer are reversed. After that the T rollback completely. T reaches abort state after rollback. DBs state prior to the T is achieved. Terminated state 1. Atransaction is said to have terminated if has either committed or aborted.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions",
+        "Concurrency Control",
+        "Database Normalization"
+      ]
+    }
+  },
+  {
+    "text": "LEC-13: How to implement Atomicity and Durability in Transactions Recovery Mechanism Component of DBMS supports atomicity and durability. Shadow-copy scheme NAWRWNE 1. Based on making copies of DB (aka, shadow copies). Assumption only one Transaction (T) is active at a time. A pointer called db-pointer is maintained on the disk; which at any instant points to current copy of DB. T, that wants to update DB first creates a complete copy of DB. All further updates are done on new DB copy leaving the original copy (shadow copy) untouched. If at any point the T has to be aborted the system deletes the new copy. And the old copy is not affected. If T success, it is committed as, 1. OS makes sure all the pages of the new copy of DB written on the disk. DB system updates the db-pointer to point to the new copy of DB. New copy is now the current copy of DB. The old copy is deleted.. The Tis said to have been COMMITTED at the point where the updated db-pointer is written to disk. Atomicity 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions",
+        "Atomicity",
+        "Durability",
+        "Shadow-Copy Scheme"
+      ]
+    }
+  },
+  {
+    "text": ". New copy is now the current copy of DB. The old copy is deleted.. The Tis said to have been COMMITTED at the point where the updated db-pointer is written to disk. Atomicity 1. If T fails at any time before db-pointer is updated, the old content of DB are not affected. 2. Tabort can be done by just deleting the new copy of DB. 3. Hence, either all updates are reflected or none. Durability 1. Suppose, system fails are any time before the updated db-pointer is written to disk. 2. When the system restarts, it will read db-pointer & will thus, see the original content of DB and none of the effects of T will be visible. 3. Tis assumed to be successful only when db-pointer is updated. 4. Ifsystem fails after db-pointer has been updated. Before that all the pages of the new copy were written to disk. Hence, when system restarts, it will read new DB copy. The implementation is dependent on write to the db-pointer being atomic",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "NoSQL Databases",
+        "Database Security"
+      ]
+    }
+  },
+  {
+    "text": ". Before that all the pages of the new copy were written to disk. Hence, when system restarts, it will read new DB copy. The implementation is dependent on write to the db-pointer being atomic. Luckily, disk system provide atomic updates to entire block or at least a disk sector. So, we make sure db-pointer lies entirely in a single sector. By storing db-pointer at the beginning of a block. Inefficient, as entire DB is copied for every Transaction. Vi Bwn Log-based recovery methods 1. w The log is a sequence of records. Log of each transaction is maintained in some stable storage so that if any failure occurs, then it can be recovered from there. If any operation is performed on the database, then it will be recorded in the log. But the process of storing the logs should be done before the actual transaction is applied in the database",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ],
+      "Computer Network": [],
+      "DBMS": [
+        "Database Normalization",
+        "Transactions",
+        "Concurrency Control",
+        "NoSQL Databases"
+      ],
+      "OOPS": [],
+      "System Design": [],
+      "LLD": [],
+      "Git": [],
+      "Linux": [
+        "Process Management",
+        "File Systems",
+        "Shell Scripting",
+        "System Administration",
+        "Package Management"
+      ],
+      "Aptitude": []
+    }
+  },
+  {
+    "text": ". If any operation is performed on the database, then it will be recorded in the log. But the process of storing the logs should be done before the actual transaction is applied in the database. Stable storage is a classification of computer data storage technology that guarantees atomicity for any given write operation and allows software to be written that is robust against some hardware and power failures. Deferred DB Modifications 1. Ensuring atomicity by recording all the DB modifications in the log but deferring the execution of all the write operations until the final action of the T has been executed. Log information is used to execute deferred writes when T is completed. if system crashed before the T completes, or if T is aborted, the information in the logs are ignored. if T completes, the records associated to it in the log file are used in executing the deferred writes. 5. _ If failure occur while this updating is taking place, we preform redo. Immediate DB Modifications 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Deferred DB Modifications",
+        "Immediate DB Modifications"
+      ]
+    }
+  },
+  {
+    "text": ". 5. _ If failure occur while this updating is taking place, we preform redo. Immediate DB Modifications 1. DB modifications to be output to the DB while the T is still in active state. DB modifications written by active T are called uncommitted modifications. In the event of crash or T failure, system uses old value field of the log records to restore modified values. Update takes place only after log records in a stable storage. Failure handling 1. System failure before T completes, or if T aborted, then old value field is used to undo the T. 2. If T completes and system crashes, then new value field is used to redo T having commit logs in the logs. RWN va Bwn",
+    "metadata": {
+      "topic": "Database Management System",
+      "subtopics": [
+        "DB Modifications",
+        "Failure Handling"
+      ]
+    }
+  },
+  {
+    "text": "LEC-14: Indexing in DBMS Indexing is used to optimise the performance of a database by minimising the number of disk accesses required when a query is Processed. The index is a type of data structure. It is used to locate and access the data in a database table quickly. Speeds up operation with read operations like SELECT queries, WHERE clause etc. Search Key: Contains copy of primary key or candidate key of the table or something else. Data Reference: Pointer holding the address of disk block Search Key Data Reference where the value of the corresponding key is stored. D Indexing is optional, but increases access speed. It is not the Ne Cc. primary mean to access the tuple, it is the secondary mean. Key Value Index file is always sorted. Indexing Methods 1. Primary Index (Clustering Index) 1. Afile may have several indices, on different search keys",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Indexing",
+        "Database Normalization",
+        "SQL Queries"
+      ]
+    }
+  },
+  {
+    "text": ". Key Value Index file is always sorted. Indexing Methods 1. Primary Index (Clustering Index) 1. Afile may have several indices, on different search keys. If the data file containing the records is sequentially ordered, a Primary index is an index whose search key also defines the sequential order of the file. 2. NOTE: The term primary index is sometimes used to mean an index on a primary key. However, such usage is nonstandard and should be avoided. 3. All files are ordered sequentially on some search key. It could be Primary Key or non-primary key. 4. Dense And Sparse Indices 1. Dense Index 1. The dense index contains an index record for every search key value in the data file. 2. The index record contains the search-key value and a pointer to the first data record with that search-key value. The rest of the records with the same search-key value would be stored sequentially after the first record. 3. It needs more space to store index record itself",
+    "metadata": {
+      "topic": "Database Management Systems",
+      "subtopics": [
+        "Indexing Methods",
+        "Primary Index (Clustering Index)",
+        "Dense And Sparse Indices"
+      ]
+    }
+  },
+  {
+    "text": ". The rest of the records with the same search-key value would be stored sequentially after the first record. 3. It needs more space to store index record itself. The index records have the search key and a pointer to the actual record on the disk. 2. Sparse Index 1. Anindex record appears for only some of the search-key values. 2. Sparse Index helps you to resolve the issues of dense Indexing in DBMS. In this method of indexing technique, a range of index columns stores the same data block address, and when data needs to be retrieved, the block address will be fetched. 5. Primary Indexing can be based on Data file is sorted w.rt Primary Key attribute or non-key attributes. 6. Based on Key attribute 1. Data file is sorted w.rt primary key attribute. 2. PK will be used as search-key in Index. 3. Sparse Index will be formed i.e,, no. of entries in the index file = no. of blocks in datafile. 7. Based on Non-Key attribute 1. Data file is sorted wrt non-key attribute. 2. No",
+    "metadata": {
+      "topic": "Indexing in DBMS",
+      "subtopics": [
+        "Sparse Index",
+        "Primary Indexing",
+        "Secondary Indexing"
+      ]
+    }
+  },
+  {
+    "text": ". 3. Sparse Index will be formed i.e,, no. of entries in the index file = no. of blocks in datafile. 7. Based on Non-Key attribute 1. Data file is sorted wrt non-key attribute. 2. No. Of entries in the index = unique non-key attribute value in the data file. 3. _ This is dense index as, all the unique values have an entry in the index file. 4. E.g,, Lets assume that a company recruited many employees in various departments. In this case, clustering indexing in DBMS =N mee eo should be created for all employees who belong to the same: dept.. = 8. Multi-level Index: 1. Index with two or more levels. index BI cate 2. Ifthe single level index become enough large that the binary cuterindex Dock - plock search it self would take much time, we can break down st indexing into multiple levels. innerindex 2. Secondary Index (Non-Clustering Index) 1. Datafile is unsorted. Hence, Primary Indexing is not possible. 2. Can be done on key or non-key attribute. 3",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security"
+      ]
+    }
+  },
+  {
+    "text": ". innerindex 2. Secondary Index (Non-Clustering Index) 1. Datafile is unsorted. Hence, Primary Indexing is not possible. 2. Can be done on key or non-key attribute. 3. Called secondary indexing because normally one indexing is already applied. 4. No. Of entries in the index file = no. of records in the data file. 5. _ Its an example of Dense index. Two-level sparse index.",
+    "metadata": {
+      "topic": "Database Management System (DBMS)",
+      "subtopics": [
+        "Indexing",
+        "Secondary Indexing",
+        "Datafile organization"
+      ]
+    }
+  },
+  {
+    "text": "9. Advantages of Indexing 1. Faster access and retrieval of data. 2. I 0 is less. 10. Limitations of Indexing 1. Additional space to store index table 2. Indexing Decrease performance in INSERT, DELETE, and UPDATE query.",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Indexing",
+        "Advantages of Indexing",
+        "Limitations of Indexing"
+      ]
+    }
+  },
+  {
+    "text": "4. LEC-15: No SQL No SQL databases (aka not only SQL) are non-tabular databases and store data differently than relational tables. No SQL databases come in a variety of types based on their data model. The main types are document, key-value, wide-column, and graph. They provide flexible schemas and scale easily with large amounts of data and high user loads. 1. They are schema free. Data structures used are not tabular, they are more flexible, has the ability to adjust dynamically. Can handle huge amount of data (big data). Most of the No SQL are open sources and has the capability of horizontal scaling. It just stores data in some format other than relational. History behind No SQL 1. No SQL databases emerged in the late 2000 s as the cost of storage dramatically decreased. Gone were the days of needing to create a complex, difficult-to-manage data model in order to avoid data duplication",
+    "metadata": {
+      "topic": "NoSQL",
+      "subtopics": [
+        "Data Models",
+        "Types of No SQL Databases",
+        "History",
+        "Characteristics"
+      ]
+    }
+  },
+  {
+    "text": ". Gone were the days of needing to create a complex, difficult-to-manage data model in order to avoid data duplication. Developers (rather than storage) were becoming the primary cost of software development, so No SQL databases optimised for developer productivity. 2. Data becoming unstructured more, hence structuring (defining schema in advance) them had becoming costly. No SQL databases allow developers to store huge amounts of unstructured data, giving them a lot of flexibility. 4. Recognising the need to rapidly adapt to changing requirements in a software system. Developers needed the ability to iterate quickly and make changes throughout their software stack all the way down to the database. No SQL databases gave them this flexibility. 5. Cloud computing also rose in popularity, and developers began using public clouds to host their applications and data",
+    "metadata": {
+      "topic": "NoSQL Databases",
+      "subtopics": [
+        "Data Normalization",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". This is difficult with relational databases due to the difficulty in spreading out related data across nodes. With non-relational databases, this is made simpler since collections are self-contained and not coupled relationally. This allows them to be distributed across nodes more simply, as queries do not have to join them together across nodes. 2. Scaling horizontally is achieved through Sharding OR Replica-sets. C. High Availability 1. No SQL databases are highly available due to its auto replication feature ie. whenever any kind of failure happens data replicates itself to the preceding consistent state. 2. If a server fails, we can access that data from another server as well, as in No SQL database data is stored at multiple servers. D. Easy insert and read operations. 1. Queries in No SQL databases can be faster than SQL databases. Why Data in SQL databases is typically normalised, so queries for a single object or entity require you to join data from multiple tables",
+    "metadata": {
+      "topic": "Non-Relational Databases",
+      "subtopics": [
+        "Scaling horizontally",
+        "High Availability",
+        "Easy insert and read operations"
+      ]
+    }
+  },
+  {
+    "text": ". Why Data in SQL databases is typically normalised, so queries for a single object or entity require you to join data from multiple tables. As your tables grow in size, the joins can become expensive. However, data in No SQL databases is typically stored in a way that is optimised for queries. The rule of thumb when you use Mongo DB is data that is accessed together should be stored together. Queries typically do not require joins, so the queries are very fast. 2. But difficult delete or update operations. E. Caching mechanism. F. No SQL use case is more for Cloud applications. When to use No SQL Fast-paced Agile development Storage of structured and semi-structured data Huge volumes of data Requirements for scale-out architecture Modern application paradigms like micro-services and real-time streaming. No SQL DB Misconceptions 1. Relationship data is best suited for relational databases. 1",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": ". No SQL DB Misconceptions 1. Relationship data is best suited for relational databases. 1. A common misconception is that No SQL databases or non-relational databases dont store relationship data well. No SQL databases can store relationship data they just store it differently than relational databases do. In fact, when compared with relational databases, many find modelling relationship data in No SQL databases to be easier than in relational databases, because related data doesnt have to be split between tables. No SQL data models allow related data to be nested within a single data structure. 2. No SQL databases dont support ACID transactions. OS) w VW Bwne",
+    "metadata": {
+      "topic": "NoSQL DB Misconceptions",
+      "subtopics": [
+        "Relationship Data",
+        "ACID Transactions"
+      ]
+    }
+  },
+  {
+    "text": ". 4. Akey-value database associates a value (which can be anything from a number or simple string to a complex object) with a key, which is used to keep track of the object. In its simplest form, a key-value store is like a dictionary/array/map object as it exists in most programming paradigms, but which is stored in a persistent way and managed by a Database Management System (DBMS). 5. Key-value databases use compact, efficient index structures to be able to quickly and reliably locate a value by its key, making them ideal for systems that need to be able to find and retrieve data in constant time. 6. There are several use-cases where choosing a key value store approach is an optimal solution: a) Real time random data access, e.g, user session attributes in an online application such as gaming or finance. b) Caching mechanism for frequently accessed data or configuration based on keys. c) Application is designed on simple key-based queries. 2",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "Indexing",
+        "Transactions"
+      ]
+    }
+  },
+  {
+    "text": ". b) Caching mechanism for frequently accessed data or configuration based on keys. c) Application is designed on simple key-based queries. 2. Column-Oriented / Columnar / C-Store / Wide-Column 1. The data is stored such that each row of a column will be next to other rows from that same column. 2. While a relational database stores data in rows and reads data row by row, a column store is organised as a set of columns. his means that when you want to run analytics on a small number of columns, you can read those columns directly without consuming memory with the unwanted data. Columns are often of the same type and benefit from more efficient compression, making reads even faster. Columnar databases can quickly aggregate the value of a given column (adding up the total sales for the year, for example). Use cases include analytics. 3. eg. Cassandra, Red Shift, Snowflake. 3. Document Based Stores 1. This DB store data in documents similar to JSON (Java Script Object Notation) objects",
+    "metadata": {
+      "topic": "Database Management System",
+      "subtopics": [
+        "NoSQL Databases",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Backup and Recovery"
+      ]
+    }
+  },
+  {
+    "text": ". Use cases include analytics. 3. eg. Cassandra, Red Shift, Snowflake. 3. Document Based Stores 1. This DB store data in documents similar to JSON (Java Script Object Notation) objects. Each document contains pairs of fields and values. The values can typically be a variety of types including things like strings, numbers, booleans, arrays, or objects. 2. Use cases include e-commerce platforms, trading platforms, and mobile app development across industries. 3. Supports ACID properties hence, suitable for Transactions. 4. eg. Mongo DB, Couch DB. 4. Graph Based Stores 1. Agraph database focuses on the relationship between data elements. Each element is stored as a node (such as a person in a social media graph). The connections between elements are called links or relationships. In a graph database, connections are first-class elements of the database, stored directly. In relational databases, links are implied, using data to express the relationships. 2",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Document Based Stores",
+        "Graph Based Stores"
+      ]
+    }
+  },
+  {
+    "text": ". In a graph database, connections are first-class elements of the database, stored directly. In relational databases, links are implied, using data to express the relationships. 2. Agraph database is optimised to capture and search the connections between data elements, overcoming the overhead associated with JOI Ning multiple tables in SQL. 3. Very few real-world business systems can survive solely on graph queries. As a result graph databases are usually run alongside other more traditional databases. 4. Use cases include fraud detection, social networks, and knowledge graphs. 7. No SQL Databases Dis-advantages 1. Data Redundancy 1. Since data models in No SQL databases are typically optimised for queries and not for reducing data duplication, No SQL databases can be larger than SQL databases. Storage is currently so cheap that most consider this a minor drawback, and some No SQL databases also support compression to reduce the storage footprint. 2",
+    "metadata": {
+      "topic": "Graph Database",
+      "subtopics": [
+        "Connections as First-Class Elements",
+        "Agraph Databases",
+        "Use Cases"
+      ]
+    }
+  },
+  {
+    "text": ". Storage is currently so cheap that most consider this a minor drawback, and some No SQL databases also support compression to reduce the storage footprint. 2. Update & Delete operations are costly. 3. All type of No SQL Data model doesnt fulfil all of your application needs 1. Depending on the No SQL database type you select, you may not be able to achieve all of your use cases in a single database. For example, graph databases are excellent for analysing relationships in your data but may not provide what you need for everyday retrieval of the data such as range queries. When selecting a No SQL database, consider what your use cases will be and if a general purpose database like Mongo DB would be a better option. 4. Doesnt support ACID properties in general. 5. Doesnt support data entry with consistency constraints. w",
+    "metadata": {
+      "topic": "No SQL Databases",
+      "subtopics": [
+        "Data Model Limitations",
+        "Update & Delete Operations",
+        "ACID Properties",
+        "Data Entry Constraints"
+      ]
+    }
+  },
+  {
+    "text": "8. SQL vs No SQL SQL Databases No SQL Databases Data Storage Model Development History Examples Primary Purpose Schemas Scaling ACID Properties JOINS Data to object mapping Tables with fixed rows and columns Developed in the 1970 s with a focus on reducing data duplication Oracle, My SQL, Microsoft SQL Server, and Postgre SQL General Purpose Fixed Vertical (Scale-up) Supported Typically Required Required object-relational mapping Document: JSON documents, Key-value: key-value pairs, Widecolumn: tables with rows and dynamic columns, Graph: nodes and edges Developed in the late 2000 s with a focus on scaling and allowing for rapid application change driven by agile and Dev Ops practices",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "SQL Databases",
+        "No SQL Databases",
+        "Database Storage Model",
+        "Development History",
+        "Examples",
+        "Primary Purpose",
+        "Schemas",
+        "Scaling",
+        "ACID Properties",
+        "JOINS",
+        "Data to Object Mapping",
+        "Tables"
+      ]
+    }
+  },
+  {
+    "text": ". Document: Mongo DB and Couch DB, Key-value: Redis and Dynamo DB, Wide-column: Cassandra and H Base, Graph: Neo 4 j and Amazon Neptune Document: general purpose, Keyvalue: large amounts of data with simple lookup queries, Widecolumn: large amounts of data with predictable query patterns, Graph: analyzing and traversing relationships between connected data Flexible Horizontal (scale-out across commodity servers) Not Supported, except in DB like Mongo DB etc. Typically not required Many do not require OR Ms. Mongo DB documents map directly to data structures in most popular programming languages.",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls",
+        "Process Synchronization",
+        "Inter-process Communication",
+        "Storage Management"
+      ],
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control",
+        "Database Design",
+        "Joins and Subqueries",
+        "NoSQL Databases",
+        "Database Security",
+        "Query Optimization",
+        "Data Warehousing",
+        "Backup and Recovery"
+      ],
+      "System Design": [
+        "Design Patterns",
+        "Scalability",
+        "Load Balancing",
+        "Caching Strategies",
+        "Database Sharding",
+        "Microservices Architecture",
+        "API Design",
+        "Message Queues",
+        "CDN",
+        "CAP Theorem",
+        "System Architecture Patterns",
+        "Performance Optimization"
+      ],
+      "Aptitude": [
+        "Quantitative Aptitude",
+        "Logical Reasoning",
+        "Verbal Ability",
+        "Data Interpretation",
+        "Probability and Statistics",
+        "Permutations and Combinations",
+        "Time and Work",
+        "Profit and Loss",
+        "Ages and Ratios",
+        "Coding Problems",
+        "Pattern Recognition"
+      ]
+    }
+  },
+  {
+    "text": "LEC-16: Types of Databases Relational Databases 1. 2. DON Aw Based on Relational Model. Relational databases are quite popular, even though it was a system designed in the 1970 s. Also known as relational database management systems (RDBMS), relational databases commonly use Structured Query Language (SQL) for operations such as creating, reading, updating, and deleting data. Relational databases store information in discrete tables, which can be JOI Ned together by fields known as foreign keys. For example, you might have a User table which contains information about all your users, and join it to a Purchases table, which contains information about all the purchases theyve made. My SQL, Microsoft SQL Server, and Oracle are types of relational databases. they are ubiquitous, having acquired a steady user base since the 1970 s they are highly optimised for working with structured data",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Database Normalization",
+        "SQL Queries"
+      ]
+    }
+  },
+  {
+    "text": ". they are ubiquitous, having acquired a steady user base since the 1970 s they are highly optimised for working with structured data. they provide a stronger guarantee of data normalisation they use a well-known querying language through SQL Scalability issues (Horizontal Scaling). Data become huge, system become more complex. Object Oriented Databases 1. 5. The object-oriented data model, is based on the object-oriented-programming paradigm, which is now in wide use. Inheritance, object-identity, and encapsulation (information hiding), with methods to provide an interface to objects, are among the key concepts of object-oriented programming that have found applications in data modelling. The object-oriented data model also supports a rich type system, including structured and collection types. While inheritance and, to some extent, complex types are also present in the E-R model, encapsulation and object-identity distinguish the object-oriented data model from the E-R model",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management"
+      ],
+      "DBMS": [
+        "Database Normalization",
+        "SQL Queries",
+        "Indexing",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". While inheritance and, to some extent, complex types are also present in the E-R model, encapsulation and object-identity distinguish the object-oriented data model from the E-R model. Sometimes the database can be very complex, having multiple relations, So, maintaining a relationship between them can be tedious at times. 1. In Object-oriented databases data is treated as an object. 2. All bits of information come in one instantly available object package instead of multiple tables. Advantages 1. Data storage and retrieval is easy and quick. 2. Can handle complex data relations and more variety of data types that standard relational databases. 3. Relatively friendly to model the advance real world problems 4. Works with functionality of OO Ps and Object Oriented languages. Disadvantages 1. High complexity causes performance issues like read, write, update and delete operations are slowed down. 2. Not much of a community support as isnt widely adopted as relational databases. 3",
+    "metadata": {
+      "topic": "OOPS",
+      "subtopics": [
+        "Object-Oriented Principles",
+        "Classes and Objects",
+        "Constructors and Destructors",
+        "Method Overloading and Overriding",
+        "Access Modifiers",
+        "Interfaces and Abstract Classes",
+        "Exception Handling",
+        "Composition vs Inheritance",
+        "Design Principles",
+        "Generic Programming"
+      ]
+    }
+  },
+  {
+    "text": ". High complexity causes performance issues like read, write, update and delete operations are slowed down. 2. Not much of a community support as isnt widely adopted as relational databases. 3. Does not support views like relational databases. e.g., Object DB, Gem Stone etc. No SQL Databases 1. IN AM ARWH No SQL databases (aka not only SQL) are non-tabular databases and store data differently than relational tables. No SQL databases come in a variety of types based on their data model. The main types are document, key-value, wide-column, and graph. They provide flexible schemas and scale easily with large amounts of data and high user loads. They are schema free. Data structures used are not tabular, they are more flexible, has the ability to adjust dynamically. Can handle huge amount of data (big data). Most of the No SQL are open sources and has the capability of horizontal scaling. It just stores data in some format other than relational. Refer LEC-15 notes..",
+    "metadata": {
+      "topic": "No SQL Databases",
+      "subtopics": [
+        "Introduction to No SQL databases",
+        "Data models of No SQL databases (Document, Key-value, Wide-column, Graph)",
+        "Schema flexibility and scalability"
+      ]
+    }
+  },
+  {
+    "text": ". Most of the No SQL are open sources and has the capability of horizontal scaling. It just stores data in some format other than relational. Refer LEC-15 notes... Hierarchical Databases 1. As the name suggests, the hierarchical database model is most appropriate for use cases in which the main focus of information gathering is based on a concrete hierarchy, such as several individual employees reporting to a single department at a company. The schema for hierarchical databases is defined by its tree-like organisation, in which there is typically a root parent directory of data stored as records that links to various other subdirectory branches, and each subdirectory branch, or child record, may link to various other subdirectory branches. The hierarchical database structure dictates that, while a parent record can have several child records, each child record can only have one parent record. Data within records is stored in the form of fields, and each field can only contain one value",
+    "metadata": {
+      "topic": "NoSQL",
+      "subtopics": [
+        "Database Normalization",
+        "Indexing",
+        "Transactions"
+      ]
+    }
+  },
+  {
+    "text": ". Data within records is stored in the form of fields, and each field can only contain one value. Retrieving hierarchical data from a hierarchical database architecture requires traversing the entire tree, starting at the root node. Since the disk storage system is also inherently a hierarchical structure, these models can also be used as physical models. The key advantage of a hierarchical database is its ease of use. The one-to-many organisation of data makes traversing the database simple and fast, which is ideal for use cases such as website drop-down menus or computer folders in systems like",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ]
+    }
+  },
+  {
+    "text": "Microsoft Windows OS. Due to the separation of the tables from physical storage structures, information can easily be added. or deleted without affecting the entirety of the database. And most major programming languages offer functionality for reading tree structure databases. 6. The major disadvantage of hierarchical databases is their inflexible nature. The one-to-many structure is not ideal for complex structures as it cannot describe relationships in which each child node has multiple parents nodes. Also the tree-like organisation of data requires top-to-bottom sequential searching, which is time consuming, and requires repetitive storage of data in multiple different entities, which can be redundant. 7. eg, IBM IMS. Network Databases Extension of Hierarchical databases The child records are given the freedom to associate with multiple parent records. Organised in a Graph structure. Can handle complex relations. Maintenance is tedious. M:N links may cause slow retrieval",
+    "metadata": {
+      "topic": "Operating System",
+      "subtopics": [
+        "Process Management",
+        "File Systems",
+        "Database Normalization"
+      ]
+    }
+  },
+  {
+    "text": ". Organised in a Graph structure. Can handle complex relations. Maintenance is tedious. M:N links may cause slow retrieval. Not much web community support. e.g, Integrated Data Store (IDS), IDMS (Integrated Database Management System), Raima Database Manager, Turbol MAGE etc. ONANRWNS",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management"
+      ],
+      "Graph Structures": [
+        "Organised in a Graph structure",
+        "Can handle complex relations",
+        "M:N links may cause slow retrieval",
+        "Not much web community support"
+      ]
+    }
+  },
+  {
+    "text": ". In case any of the servers had to face a failure due to any possible reason, the data is available at other servers to access. 2. Load balancing: or scalability doesnt come by default with the database. It has to be brought by clustering regularly. It also depends on the setup. Basically, what load balancing does is allocating the workload among the different servers that are part of the cluster. This indicates that More users can be supported and if for some reasons if a huge spike in the traffic appears, there is a higher assurance that it will be able to support the new traffic. One machine is not going to get all of the hits. This can provide scaling seamlessly as required. This links directly to high availability. Without load balancing, a particular machine could get overworked and traffic would slow down, leading to decrement of the traffic to zero. 3. High availability: When you can access a database, it implies that it is available",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "Load Balancing",
+        "High Availability"
+      ]
+    }
+  },
+  {
+    "text": ". 3. High availability: When you can access a database, it implies that it is available. High availability refers the amount of time a database is considered available. The amount of availability you need greatly depends on the number of transactions you are running on your database and how often you are running any kind of analytics on your data. With database clustering, we can reach extremely high levels of availability due to load balancing and have extra machines. In case a server got shut down the database will, however, be available. How does Clustering Work 1. In cluster architecture, all requests are split with many computers so that an individual user request is executed and produced by a number of computer systems. The clustering is serviceable definitely by the ability of load balancing and high-availability. If one node collapses, the request is handled by another node. Consequently, there are few or no possibilities of absolute system failures.",
+    "metadata": {
+      "topic": "High Availability",
+      "subtopics": [
+        "Database Clustering",
+        "Load Balancing",
+        "Availability"
+      ]
+    }
+  },
+  {
+    "text": "LEC-18: Partitioning & Sharding in DBMS (DB Optimisation) A big problem can be solved easily when it is chopped into several smaller sub-problems. That is what the partitioning technique does. It divides a big database containing data metrics and indexes into smaller and handy slices of data called partitions. The partitioned tables are directly used by SQL queries without any alteration. Once the database is partitioned, the data definition language can easily work on the smaller partitioned slices, instead of handling the giant database altogether. This is how partitioning cuts down the problems in managing large database tables. Partitioning is the technique used to divide stored database objects into separate servers. Due to this, there is an increase in performance, controllability of the data. We can manage huge chunks of data optimally",
+    "metadata": {
+      "topic": "DBMS",
+      "subtopics": [
+        "Partitioning",
+        "Sharding"
+      ]
+    }
+  },
+  {
+    "text": ". Due to this, there is an increase in performance, controllability of the data. We can manage huge chunks of data optimally. When we horizontally scale our machines/servers, we know that it gives us a challenging time dealing with relational databases as its quite tough to maintain the relations. But if we apply partitioning to the database that is OW Pwn: 2. Horizontal Partitioning 2. When Partitioning is Applied already scaled out i.e. equipped with multiple servers, we can partition our database among those servers and handle the big data easily. Vertical Partitioning Slicing relation vertically / column-wise. Need to access different servers to get complete tuples. Slicing relation horizontally / row-wise. independent chunks of data tuples are stored in different servers. Dataset become much huge that managing and dealing with it become a tedious task",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "Horizontal Partitioning",
+        "Vertical Partitioning"
+      ]
+    }
+  },
+  {
+    "text": "Database Scaling Patterns Step by Step Scaling - Lakshay\n\nWhat will you learn Step by Step manner, when to choose which Scaling option. Which Scaling option is feasible practically at the moment.\n\nA Case Study Cab Booking APP Tiny startup. e 10 customers onboard. e A single small machine DB stores all customers, trips, locations, booking data, and customer trip history. 1 trip booking in 5 mins.\n\nYour App becoming famous, but... The PROBLEM begins e Requests scales upto 30 bookings per minute. Your tiny DB system has started performing poorly. API latency has increased a lot. Transactions facing Deadlock, Starvation, and frequent failure. Sluggish App experience. Customer dis-satisfaction.\n\nIs there any solution We have to apply some kind of performance optimisation measures. We might have to scale our system going forward.",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "Database Scaling",
+        "Performance Optimization",
+        "Microservices Architecture"
+      ]
+    }
+  },
+  {
+    "text": "Is there any solution We have to apply some kind of performance optimisation measures. We might have to scale our system going forward.\n\nPattern 1 Query Optimisation & Connection Pool Implementation Cache frequently used non-dynamic data like, booking history, payment history, user profiles etc. Introduce Database Redundancy. (Or may be use No SQL) Use connection pool libraries to Cache DB connections. Multiple application threads can use same DB connection. Good optimisations as of now. Scaled the business to one more city, and now getting 100 booking per minute.\n\nPattern 2 Vertical Scaling or Scale-up Upgrading our initial tiny machine. RAM by 2 x and SSD by 3 x etc. Scale up is pocket friendly till a point only. e More you scale up, cost increases exponentially. Good Optimisation as of now. e Business is growing, you decided to scale it to 3 more cities and now getting 300 booking per minute.",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "Design Patterns",
+        "Scalability",
+        "Load Balancing"
+      ]
+    }
+  },
+  {
+    "text": "Pattern 3 Command Query Responsibility Segregation (CQRS) The scaled up big machine is not able to handle all read/write requests. Separate read/write operations physical machine wise. 2 more machines as replica to the primary machine. e All read queries to replicas. All write queries to primary. Business is growing, you decided to scale it to 2 more cities. e Primary is not able to handle all write requests. Lag between primary and replica is impacting user experience.\n\nPattern 4 Multi Primary Replication Why not distribute write request to replica also e All machines can work as primary & replica. Multi primary configuration is a logical circular ring. e Write data to any node. Read data from any node that replies to the broadcast first. You scale to 5 more cities & your system is in pain again. (50 req/s)",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "Multi Primary Replication",
+        "CQRS"
+      ]
+    }
+  },
+  {
+    "text": "Pattern 5 Partitioning of Data by Functionality e What about separating the location tables in separate DB schema e What about putting that DB in separate machines with primary-replica or multi-primary configuration Different DB can host data categorised by different functionality. e Backend or application layer has to take responsibility to join the results. e Planning to expand your business to other country.\n\nPattern 6 Horizontal Scaling or Scale-out Sharding - multiple shards. e Allocate 50 machines - all having same DB schema - each machine just hold a part of data. Locality of data should be there. e Each machine can have their own replicas, may be used in failure recovery. e Sharding is generally hard to apply. But No Pain, No Gain Scaling the business across continents.",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory",
+        "I/O Management",
+        "System Calls"
+      ]
+    }
+  },
+  {
+    "text": "Pattern 7 Data Centre Wise Partition Requests travelling across continents are having high latency. What about distributing traffic across data centres e Data centres across continents. e Enable cross data centre replication which helps disaster recovery. e This always maintain Availability of your system. e Now, Plan for an IPO:p",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "Deadlocks",
+        "CPU Scheduling",
+        "Threads and Concurrency",
+        "Virtual Memory"
+      ],
+      "System Design": [
+        "Design Patterns",
+        "Scalability",
+        "Load Balancing",
+        "Caching Strategies",
+        "Database Sharding",
+        "Microservices Architecture",
+        "API Design",
+        "Message Queues"
+      ]
+    }
+  },
+  {
+    "text": "LEC-20: CAP Theorem Basic and one of the most important concept in Distributed Databases. Useful to know this to design efficient distributed system for your given business logic. Lets first breakdown CAP 1. Consistency: In a consistent system, all nodes see the same data simultaneously. If we perform a read operation on a consistent system, it should return the value of the most recent write operation. The read should cause all nodes to return the same data. All users see the same data at the same time, regardless of the node they connect to. When data is written to a single node, it is then replicated across the other nodes in the system. Availability: When availability is present in a distributed system, it means that the system remains operational all of the time. Every request will get a response regardless of the individual state of the nodes. This means that the system will operate even if there are multiple nodes down",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "CAP Theorem"
+      ]
+    }
+  },
+  {
+    "text": ". Every request will get a response regardless of the individual state of the nodes. This means that the system will operate even if there are multiple nodes down. Unlike a consistent system, theres no guarantee that the response will be the most recent write operation. Partition Tolerance: When a distributed system encounters a partition, it means that theres a break in communication between nodes. If a system is partition-tolerant, the system does not fail, regardless of whether messages are dropped or delayed between nodes within the system. To have partition tolerance, the system must replicate records across combinations of nodes and networks. What does the CAP Theorem says, 1. The CAP theorem states that a distributed system can only provide two of three properties simultaneously: consistency, availability, and partition tolerance. The theorem formalises the tradeoff between consistency and availability when theres a partition",
+    "metadata": {
+      "topic": "System Design",
+      "subtopics": [
+        "CAP Theorem",
+        "Partition Tolerance"
+      ]
+    }
+  },
+  {
+    "text": ". You can deploy them to nodes using replication. CP Databases: CP databases enable consistency and partition tolerance, but not availability. When a partition occurs, the system has to turn off inconsistent nodes until the partition can be fixed. Mongo DB is an example of a CP database. Its a No SOL database management system (DBMS) that uses documents for data storage. Its considered schema-less, which means that it doesnt require a defined database schema. Its commonly used in big data and applications running in different locations. The CP system is structured so that theres only one primary node that receives all of the write requests in a given replica set. Secondary nodes replicate the data in the primary nodes, so if the primary node fails, a secondary node can stand-in. In banking system Availability is not as important as consistency, so we can opt it (Mongo DB). AP Databases: AP databases enable availability and partition tolerance, but not consistency",
+    "metadata": {
+      "topic": "Database Management System",
+      "subtopics": [
+        "NoSQL Databases",
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  },
+  {
+    "text": ". In banking system Availability is not as important as consistency, so we can opt it (Mongo DB). AP Databases: AP databases enable availability and partition tolerance, but not consistency. In the event of a partition, all nodes are available, but theyre not all updated. For example, if a user tries to access data from a bad node, they wont receive the most up-to-date version of the data. When the partition is eventually resolved, most AP databases will sync the nodes to ensure consistency across them. Apache Cassandra is an example of an AP database. Its a No SOL database with no primary node, meaning that all of the nodes remain available. Cassandra allows for eventual consistency because users can re-sync their data right after a partition is resolved. For apps like Facebook, we value availability more than consistency, wed opt for AP Databases like Cassandra or Amazon Dynamo DB. Consistency CA c P Partition Availability AP Tolerance",
+    "metadata": {
+      "Operating System": [
+        "Process Management",
+        "Memory Management",
+        "File Systems"
+      ],
+      "Computer Network": [
+        "Network Topologies"
+      ],
+      "DBMS": [
+        "NoSQL Databases"
+      ],
+      "System Design": [
+        "Scalability",
+        "Load Balancing"
+      ],
+      "Git": [],
+      "Linux": [],
+      "Aptitude": []
+    }
+  },
+  {
+    "text": ". Making the entire system slow for everyone on the site. DB replication will take care of distributing data from Master machine to Slaves machines. This can be synchronous or asynchronous depending upon the systems need.",
+    "metadata": {
+      "topic": "Database Management System (DBMS)",
+      "subtopics": [
+        "Transactions",
+        "Concurrency Control"
+      ]
+    }
+  }
+]
